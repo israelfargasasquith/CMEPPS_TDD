@@ -60,8 +60,8 @@ class CuentaTest {
 		cuenta67890.retirar(100d);
 		
 		boolean saldo12345, saldo67890;
-		saldo12345 =true;
-		saldo67890 = true;
+		saldo12345 = cuenta12345.getSaldo() == -250d;
+		saldo67890 = cuenta67890.getSaldo() == -450d;
 		
 		assertTrue(saldo12345 && saldo67890);
 	}
