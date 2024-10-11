@@ -13,7 +13,7 @@ public class Cuenta {
 	}
 	
 	public  void retirar(int retirar) {
-		saldo = -1;
+		saldo -= retirar;
 	}
 	
 	public int getSaldo() {
