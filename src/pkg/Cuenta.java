@@ -12,6 +12,10 @@ public class Cuenta {
 		saldo+=ingreso;
 	}
 	
+	public  void retirar(int retirar) {
+		saldo = -1;
+	}
+	
 	public int getSaldo() {
 		return saldo;
 	}
