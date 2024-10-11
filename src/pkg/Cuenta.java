@@ -2,21 +2,21 @@ package pkg;
 
 public class Cuenta {
 
-	private int saldo;
+	private double saldo;
 	
-	public  Cuenta(int saldoInit) {
+	public  Cuenta(double saldoInit) {
 		saldo = saldoInit;
 	}
 	
-	public  void ingresar(int ingreso) {
+	public  void ingresar(double ingreso) {
 		saldo+=ingreso;
 	}
 	
-	public  void retirar(int retirar) {
+	public  void retirar(double retirar) {
 		saldo -= retirar;
 	}
 	
-	public int getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
 	
