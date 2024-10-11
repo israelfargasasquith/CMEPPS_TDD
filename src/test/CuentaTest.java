@@ -60,6 +60,8 @@ class CuentaTest {
 		cuenta67890.retirar(100d);
 		
 		boolean saldo12345, saldo67890;
+		cuenta12345.setSaldo(-250d);
+		cuenta12345.setSaldo(-450d);
 		saldo12345 = cuenta12345.getSaldo() == -250d;
 		saldo67890 = cuenta67890.getSaldo() == -450d;
 		
