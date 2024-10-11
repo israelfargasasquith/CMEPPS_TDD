@@ -25,6 +25,8 @@ class CuentaTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		cuenta = new Cuenta(0d);
+		cuenta12345 = new Cuenta(50d);
+		cuenta67890 = new Cuenta(0d);
 	}
 
 	@AfterEach
@@ -44,11 +46,24 @@ class CuentaTest {
 	@Test
 	void test0014() {
 		
+		cuenta12345.retirar(200d);
+		cuenta67890.retirar(350d);
+		
+		cuenta12345.ingresar(100d);
+		
+		cuenta67890.retirar(200d);
+		cuenta67890.retirar(150d);
+		cuenta12345.retirar(200d);
+		
+		cuenta67890.ingresar(50d);
+		
+		cuenta67890.retirar(100d);
+		
 		boolean saldo12345, saldo67890;
 		saldo12345 =true;
 		saldo67890 = true;
 		
-		assertTrue(true,saldo12345 && saldo67890);
+		assertTrue(saldo12345 && saldo67890);
 	}
 	
 	
