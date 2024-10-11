@@ -12,7 +12,7 @@ import pkg.Cuenta;
 
 class CuentaTest {
 	
-	Cuenta cuenta;
+	Cuenta cuenta,cuenta12345,cuenta67890;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -41,6 +41,15 @@ class CuentaTest {
 		cuenta.retirar(1d);
 		assertEquals(-1d,cuenta.getSaldo());
 	}
+	@Test
+	void test0014() {
+		
+		boolean saldo12345, saldo67890;
+		
+		assertTrue(true,saldo12345 && saldo67890);
+	}
+	
+	
 	
 
 }
