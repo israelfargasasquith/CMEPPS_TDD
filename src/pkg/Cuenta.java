@@ -4,6 +4,7 @@ public class Cuenta {
 
 	private double saldo;
 	
+	
 	public  Cuenta(double saldoInit) {
 		saldo = saldoInit;
 	}

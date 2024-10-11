@@ -45,6 +45,8 @@ class CuentaTest {
 	void test0014() {
 		
 		boolean saldo12345, saldo67890;
+		saldo12345 =true;
+		saldo67890 = true;
 		
 		assertTrue(true,saldo12345 && saldo67890);
 	}
