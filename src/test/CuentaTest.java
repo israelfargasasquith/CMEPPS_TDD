@@ -24,9 +24,9 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		cuenta = new Cuenta(0d);
-		cuenta12345 = new Cuenta(50d);
-		cuenta67890 = new Cuenta(0d);
+		cuenta = new Cuenta(0d, "0", "test");
+		cuenta12345 = new Cuenta(50d,"12345","pepe");
+		cuenta67890 = new Cuenta(0d,"67890","antonio");
 	}
 
 	@AfterEach
