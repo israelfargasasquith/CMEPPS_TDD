@@ -8,12 +8,15 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import pkg.Cuenta;
+
 class CuentaTest {
 	
-	Cuenta cuenta;
+	static Cuenta cuenta;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		cuenta = new Cuenta(0);
 	}
 
 	@AfterAll
@@ -22,7 +25,7 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-	cuenta = new Cuenta(0);
+	
 	}
 
 	@AfterEach
