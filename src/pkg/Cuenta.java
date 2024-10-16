@@ -1,8 +1,10 @@
 package pkg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cuenta {
+	
 
 	private double saldo;
 	private String numero;
@@ -14,14 +16,17 @@ public class Cuenta {
 		saldo = saldoInit;
 		this.titular = titular;
 		this.numero = numero;
+		this.movimientos = new ArrayList<Movimiento>();
 	}
 	
 	public  void ingresar(double ingreso) {
 		saldo+=ingreso;
+		movimientos.add(new Movimiento(ingreso,"",Movimiento.Signo.D));
 	}
 	
 	public  void retirar(double retirar) {
 		saldo -= retirar;
+		movimientos.add(new Movimiento(retirar,"",Movimiento.Signo.H));
 	}
 	
 
