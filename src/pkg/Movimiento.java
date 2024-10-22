@@ -2,7 +2,7 @@ package pkg;
 
 public class Movimiento {
 	
-	private enum Signo{
+	 enum Signo{
 		D,
 		H
 	}
@@ -12,12 +12,22 @@ public class Movimiento {
 	private String detalle;
 	private Signo signo;
 	
+	public Movimiento(double importe, String detalle, Signo signo) {
+		this.importe = importe;
+		this.detalle = detalle;
+		this.signo = signo;
+	}
+	
 	public double getImporte() {
 		return importe;
 	}
 
 	public String getDetalle() {
 		return detalle;
+	}
+	
+	public Signo getSigno() {
+		return signo;
 	}
 
 

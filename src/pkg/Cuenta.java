@@ -21,12 +21,18 @@ public class Cuenta {
 	
 	public  void ingresar(double ingreso) {
 		saldo+=ingreso;
+		System.out.println("Ingreso de "+ingreso+" la cuenta queda como "+saldo+ " de la cuenta "+numero);
 		movimientos.add(new Movimiento(ingreso,"",Movimiento.Signo.D));
 	}
 	
 	public  void retirar(double retirar) {
+		if((saldo-retirar)>=-500d) {
 		saldo -= retirar;
+		System.out.println("Retirada de "+retirar+" la cuenta queda como "+saldo+" de la cuenta "+numero);
 		movimientos.add(new Movimiento(retirar,"",Movimiento.Signo.H));
+		}else {
+			System.out.println("Error: No se puede retirar, fondos insuficientes");
+		}
 	}
 	
 

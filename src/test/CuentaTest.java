@@ -51,17 +51,16 @@ class CuentaTest {
 		
 		cuenta12345.ingresar(100d);
 		
-		cuenta67890.retirar(200d);
+		cuenta67890.retirar(200d); //error por pantalla -550 en la cuenta no se realiza
 		cuenta67890.retirar(150d);
 		cuenta12345.retirar(200d);
 		
 		cuenta67890.ingresar(50d);
 		
-		cuenta67890.retirar(100d);
+		cuenta67890.retirar(100d); //errorpor pantalla -550 en la cuenta no se realiza
 		
 		boolean saldo12345, saldo67890;
-		cuenta12345.setSaldo(-250d);
-		cuenta67890.setSaldo(-450d);
+		
 		saldo12345 = cuenta12345.getSaldo() == -250d;
 		saldo67890 = cuenta67890.getSaldo() == -450d;
 		
